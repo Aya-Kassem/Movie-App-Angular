@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
   imgPath:string = `http://image.tmdb.org/t/p/w500/`;
   mobileMedia:any = window.matchMedia("(min-width: 750px)");
 
+  // https://www.youtube.com/watch?v=Bh8NeyejykU
   slideConfig = {
     dots: false,
     infinite: true,
@@ -81,7 +82,7 @@ export class HomeComponent implements OnInit {
       }
     } )
   }
-  // GO TO MOVIES PAGE .........
+  // GO TO ANY PAGE .........
   viewAll(requestedComponent:string){
     this._Router.navigate([requestedComponent]);
   }

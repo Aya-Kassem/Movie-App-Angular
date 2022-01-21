@@ -11,13 +11,11 @@ export class GuardGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      if(this._FormService.UserData.getValue() != null){
-        return true;
-      }else{
-        this._Router.navigate(['login']);
-        return false;
-      }
-      
+    if(this._FormService.UserData.getValue() != null){
+      return true;
+    }else{
+      this._Router.navigate(['login']);
+      return false;
+    }
   }
-  
 }

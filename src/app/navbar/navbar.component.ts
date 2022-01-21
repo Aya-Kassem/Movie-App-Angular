@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormService } from '../form.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { FormService } from '../form.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private _FormService:FormService) { }
+  constructor(private _FormService:FormService, private _Router:Router) { }
   isLoged:boolean = false;
 
   ngOnInit(): void {
@@ -24,5 +25,7 @@ export class NavbarComponent implements OnInit {
 
   LogOut(){
     this._FormService.DeleteUserData();
+    this._Router.navigate(['login']);
+
   }
 }

@@ -15,10 +15,10 @@ import { TvDetailsComponent } from './tv-details/tv-details.component';
 
 const routes: Routes = [
 
-  {path: '', redirectTo: 'home', pathMatch:'full'},
+  {path: '', redirectTo: 'home',  pathMatch:'full'},
   {path: 'login', canActivate:[LogGuardGuard], component: LoginComponent},
   {path: 'register',canActivate:[LogGuardGuard], component: RegisterComponent},
-  {path: 'home', canActivate:[GuardGuard], component: HomeComponent},
+  {path: 'home',canActivate:[GuardGuard], component: HomeComponent},
   {path: 'AllMovies', canActivate:[GuardGuard], component: AllMoviesComponent},
   {path: 'AllTv', canActivate:[GuardGuard], component: AllTvComponent},
   {path: 'AllPeople', canActivate:[GuardGuard], component: AllPeopleComponent},
